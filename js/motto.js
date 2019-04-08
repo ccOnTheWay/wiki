@@ -1396,5 +1396,5 @@ function getItem(){
 */
 function getMingYanContent(){
   var item = getItem();
-  return '成功不是偶然而是理所当然,不成功就代表你不够努力';
+  return item.content;
 }
