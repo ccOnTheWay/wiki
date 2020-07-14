@@ -1,313 +1,208 @@
-<!--
-	作者：FXC
--->
-
-	<!DOCTYPE html>
-	<html class="scrollbar">
-		
-
+<!DOCTYPE html>
+<html>
 <head><meta name="generator" content="Hexo 3.8.0">
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <title>
     
-      LICEcap录屏插件 | 前端进阶之路
+
     
-  </title>
-  <meta name="author" content="FXC">
-  <meta name="keywords" content>
-  <meta name="description" content>
-	<!-- favicon -->
-  <link rel="shortcut icon" href="/img/favicon.ico">
 
-  <!-- css -->
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-
-    <!-- jquery -->
-	<script src="/js/jquery-2.1.1.min.js"></script>
-
-  <!-- leancloud -->
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script src="/js/leancloud.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-	<body>
-		<!-- Preloader -->
-
-	<div id="preloader">
-		<div class="pre-container">
-			
-				<div class="transition">
-					<div class="three-bounce1"></div>
-					<div class="three-bounce2"></div>
-					<div class="three-bounce3"></div>
-				</div>
-						
-		</div>
-	</div>
-
-
-<!-- header -->
-<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/cz.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
-	<div class="mask">
-		<div class="h-header">
-			<div id="logo-S">
-				
-					<a href="/">
-						<img src="/img/logo.png" alt="Logo">
-					</a>
-				
-			</div>
-			<!-- Navigation in header(id="navigation-S") -->
-			<div id="navigation-S">
-				<ul>
-					
-						<li class="menu-home">
-							<a href="/" class="menu-item-home">主页</a>
-						</li>
-					
-						<li class="menu-archive">
-							<a href="/archives" class="menu-item-archive">归档</a>
-						</li>
-					
-						<li class="menu-categories">
-							<a href="/categories" class="menu-item-categories">分类</a>
-						</li>
-					
-						<li class="menu-tags">
-							<a href="/tags" class="menu-item-tags">标签</a>
-						</li>
-					
-						<li class="menu-about">
-							<a href="/about" class="menu-item-about">关于</a>
-						</li>
-					
-
-					
-						<li class="menu-search">
-							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
-						</li>
-					
-				</ul>			
-			</div>				
-		</div>
-
-		<div class="h-body">	
-			<!-- motto -->
-			
-				<div id="page-motto">
-					<p class="motto">
-						
-					</p>
-				</div>
-			
-
-			<div id="navigation-H">
-				<!-- Page title -->
-				<p>
-					
-						当前文章&nbsp;:&nbsp;《LICEcap录屏插件》
-					
-				</p>
-				<!-- Progress bar -->
-				<div id="progress-bar"></div>
-
-				<!-- Progress percent -->
-				<div id="progress-percentage">
-					<h1>0.0%</h1>
-				</div>
-			</div>
-		</div>
-		
-		<!-- others: such as time... -->			
-		<div class="h-footer">
-			<ul>
-				<!-- <li>
-					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
-				</li> -->
-				<li>
-					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i>继续阅读</a>
-				</li>
-				<!-- <li>
-					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
-				</li> -->
-			</ul>
-		</div>
-		
-		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
-<style type="text/css">
-	.header-date {
-		position: absolute;
-		left: 40px;
-		bottom: 30px;
-		writing-mode: tb-rl;
-		font-size: 36px;
-	}	
-	.header-date a {
-		border-bottom: none;
-	}
-	@media only screen and (max-width: 768 ) {
-		.header-date {
-			position: absolute;
-			left: 40px;
-			bottom: 30px;
-			writing-mode: tb-rl;
-			font-size: 20px;
-		}			
-	}
-</style>
-<div class="header-date">
-	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
-	<span id="Beijing_z43d"></span>
-</div>
-<script src="//widget.time.is/zh.js"></script>
-<script>
-	time_is_widget.init({
-		Beijing_z43d:{
-			template:"DATE", 
-			date_format:"year年 monthname dnum日"
-		}
-	});
-</script>
-</div></header>
-
-<!-- Navigation in div(id="navigation-H") -->
-<a class="nav-trigger">
-	<span></span>
-</a>
-
-<nav class="nav-container" id="cd-nav">
-	<div class="nav-header">
-		<h3>Navigation</h3>
-		<a href="javascript:;" class="nav-close"></a>
-	</div>
-	<div class="nav-body">
-		<ul>
-			
-				<li class="menu-home">
-					<a href="/" class="menu-item-home">主页</a>
-				</li>
-			
-				<li class="menu-archive">
-					<a href="/archives" class="menu-item-archive">归档</a>
-				</li>
-			
-				<li class="menu-categories">
-					<a href="/categories" class="menu-item-categories">分类</a>
-				</li>
-			
-				<li class="menu-tags">
-					<a href="/tags" class="menu-item-tags">标签</a>
-				</li>
-			
-				<li class="menu-about">
-					<a href="/about" class="menu-item-about">关于</a>
-				</li>
-			
-
-			
-				<li class="menu-search">
-					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
-				</li>
-			
-		</ul>
-	</div>
-
-	<div class="nav-footer">
-		<ul>
-	
-		
-			<li>
-				<a href="https://github.com/ccOnTheWay/wiki" title="Github" target="_blank">
-					<i class="fa fa-github"></i>
-				</a>
-			</li>
-		
-		
-		
-			<li>
-				<a href="mailto:fengxicai@fengxicai.cn" title="Email" target="_blank">
-					<i class="fa fa-envelope-o"></i>
-				</a>
-			</li>
-		
-
-		
-		
-	 
-</ul>
-	</div>
-</nav>
-
-		
-		<!--main-->
-		<main>
-			<div class="layout-post">
-	
-	
-	<div class="article-title">
-		
-	<a href="/2019/04/01/LICEcap录屏插件/" itemprop="url">
-		LICEcap录屏插件
-	</a>
-
-	</div>
-
-	<div class="article-meta">
-		<span>
-			
-	发布于
-	<a href="/2019/04/01/LICEcap录屏插件/" itemprop="url">
-		<time datetime="2019-04-01T11:09:44.000Z" itemprop="datePublished">
-	  		2019-04-01
-	  </time>
-	</a> 
-
-	/
-	更新于
-	<a href="/2019/04/01/LICEcap录屏插件/" itemprop="url">
-		<time datetime="2019-04-01T11:09:44.000Z" itemprop="dateUpdated">
-	  		2019-04-08
-	  </time>
-	</a> 	
-
-		</span>
-		/
-		<span>
-			<i class="fa fa-tags"></i>
-			
-	
-		<a href="/tags/其它-效率/" class=" ">
-			其它 效率
-		</a>
-	
-		
-		</span>
-		/
-		
-
-    <span class="leancloud_visitors" id="/2019/04/01/LICEcap录屏插件/_visitors" data-url="/2019/04/01/LICEcap录屏插件/" data-title="LICEcap录屏插件">
-        热度
-        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
-    </span>
     
-    /
 
 
 
-    <span class="leancloud_likes" id="/2019/04/01/LICEcap录屏插件/_likes" data-url="/2019/04/01/LICEcap录屏插件/" data-title="LICEcap录屏插件" rel="unlike">
-        喜欢
-        <i class="fa fa-heart"></i>
-        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
-    </span>
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>LICEcap录屏插件 | 前端进阶之路</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="其它 效率">
+    <meta name="description" content="LICEcap 录屏插件下载地址  https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A 提取码tvrp  LTCEcap 录屏插件使用  选择需要录屏的区域点击Record  Max FPS是对于录制的GIF画面清晰度的，FPS越高，GIF图的内存就越大 下面的SIZE，是询问你需要录制多少的范围，这个可以手动改正，也可以通过鼠标直接来缩放比例   选择">
+<meta name="keywords" content="其它 效率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LICEcap录屏插件">
+<meta property="og:url" content="https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/index.html">
+<meta property="og:site_name" content="前端进阶之路">
+<meta property="og:description" content="LICEcap 录屏插件下载地址  https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A 提取码tvrp  LTCEcap 录屏插件使用  选择需要录屏的区域点击Record  Max FPS是对于录制的GIF画面清晰度的，FPS越高，GIF图的内存就越大 下面的SIZE，是询问你需要录制多少的范围，这个可以手动改正，也可以通过鼠标直接来缩放比例   选择">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://file.fengxicai.cn/img/20190402171113.png">
+<meta property="og:image" content="https://file.fengxicai.cn/img/20190402171248.png">
+<meta property="og:image" content="https://file.fengxicai.cn/img/20190402171353.png">
+<meta property="og:image" content="https://file.fengxicai.cn/img/LICEcap1.gif">
+<meta property="og:updated_time" content="2019-04-08T11:54:53.724Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LICEcap录屏插件">
+<meta name="twitter:description" content="LICEcap 录屏插件下载地址  https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A 提取码tvrp  LTCEcap 录屏插件使用  选择需要录屏的区域点击Record  Max FPS是对于录制的GIF画面清晰度的，FPS越高，GIF图的内存就越大 下面的SIZE，是询问你需要录制多少的范围，这个可以手动改正，也可以通过鼠标直接来缩放比例   选择">
+<meta name="twitter:image" content="https://file.fengxicai.cn/img/20190402171113.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 
-	</div>
+    <!-- custom head -->
+    
 
-	<div class="article-content" id="article-content">
-		<h2 id="LICEcap-录屏插件"><a href="#LICEcap-录屏插件" class="headerlink" title="LICEcap 录屏插件"></a>LICEcap 录屏插件</h2><p>下载地址<br> <a href="https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A" target="_blank" rel="noopener"><br> https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A</a></p>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">FXC</h5>
+          <a href="mailto:fengxicai@fengxicai.cn" title="fengxicai@fengxicai.cn" class="mail">fengxicai@fengxicai.cn</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom">
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">LICEcap录屏插件</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">LICEcap录屏插件</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-01T11:09:44.000Z" itemprop="datePublished" class="page-time">
+  2019-04-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/工具/">工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LICEcap-录屏插件"><span class="post-toc-number">1.</span> <span class="post-toc-text">LICEcap 录屏插件</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-LICEcap录屏插件" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">LICEcap录屏插件</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-01 19:09:44" datetime="2019-04-01T11:09:44.000Z" itemprop="datePublished">2019-04-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/工具/">工具</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="LICEcap-录屏插件"><a href="#LICEcap-录屏插件" class="headerlink" title="LICEcap 录屏插件"></a>LICEcap 录屏插件</h2><p>下载地址<br> <a href="https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A" target="_blank" rel="noopener"><br> https://pan.baidu.com/s/1JEowcMCnpbk_pQP2R9jC_A</a></p>
 <p>提取码<br><code>tvrp</code></p>
 <hr>
 <p>LTCEcap 录屏插件使用</p>
@@ -331,566 +226,304 @@
 <p>录屏插件使用~~~~</p>
 <p>开发写博客神器~</p>
 <p>录屏插件使用测试~ let’s GO~</p>
-	
-	</div>
-	
-	<div id="current-post-cover" data-scr="/img/cz3.jpg"></div>
 
-	<!-- relate post, comment...-->
-	<div class="investment-container">
-		<div class="investment-header">
-			<div class="investment-title-1">
-				<div class="on">相关文章</div>
-				<div>评论</div>
-			</div>
-			<div class="investment-title-2">	            
-				
-	<span>
-		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
-		
-			<a href="/2019/04/03/面试小册-JS基础2/" title="面试小册-JS基础2" rel="prev">
-				&laquo;上一篇
-			</a>
-		
-		
-			<a href="/2019/03/27/js经典面试题/" title="js 经典面试题" rel="next">
-				下一篇&raquo;
-			</a>
-			
-	</span>
-      		
-			</div>	
-		</div>
-		
-		<div class="investment-content">
-			<div class="investment-content-list">
-				
+        </div>
 
-<div class="relate-post">
-	<ul>
-		
-				<li>
-					<div>
-						<a href="/2019/04/08/ssr科学上网/" title="ssr科学上网">
-							ssr科学上网
-						</a>
-						<p>
-							
-
-ssr 科学上网
-
-邀请码：930464http://poro.fun/user
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2019-04-08T11:54:53.724Z" itemprop="dateUpdated">2019-04-08 19:54:53</time>
+</span><br>
 
 
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/04/01/LICEcap录屏插件/" target="_blank" rel="external">https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://github.com/ccOnTheWay/wiki.git">
+            <img src="/img/avatar.jpg" alt="FXC">
+            FXC
+        </a>
+    </footer>
+</blockquote>
 
-蓝灯下载https://github.com/getlantern/download
-
-
-						</p>
-					</div>
-
-					<a href="/2019/04/08/ssr科学上网/" title="ssr科学上网">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="ssr科学上网">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/11/前端面试大纲/" title="前端面试大纲">
-							前端面试大纲
-						</a>
-						<p>
-							JS基础JS 类型
-原始类型 存在着6种原始值， 分别为：
-
-
-boolean
-
-null
-
-undefined
-
-number
-
-string
-
-symbol
-
-
-
-对象Object 类型
-
-
-						</p>
-					</div>
-
-					<a href="/2019/04/11/前端面试大纲/" title="前端面试大纲">				
-						<img src="https://i.loli.net/2019/04/11/5caef8aa900b3.png" class="relateImg" alt="前端面试大纲">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/09/svg/" title="svg">
-							svg
-						</a>
-						<p>
-							动画元素　　SVG动画元素共有4个，包括：&lt;set&gt;、&lt;animate&gt;、&lt;animateTransform&gt;、&lt;animateMotion&gt;
-
-						</p>
-					</div>
-
-					<a href="/2019/04/09/svg/" title="svg">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="svg">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/09/webpack/" title="webpack">
-							webpack
-						</a>
-						<p>
-							
-						</p>
-					</div>
-
-					<a href="/2019/04/09/webpack/" title="webpack">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="webpack">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/08/threeJS/" title="threeJS">
-							threeJS
-						</a>
-						<p>
-							
-						</p>
-					</div>
-
-					<a href="/2019/04/08/threeJS/" title="threeJS">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="threeJS">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/08/CSS3/" title="CSS3">
-							CSS3
-						</a>
-						<p>
-							CSS 2D/动画/3D
-位置、大小、旋转、透明度、阴影
-
-transition过渡transition 有这样几个属性：transition-property:属性（哪个属性参与过渡）;
-transition-duration:指过...
-						</p>
-					</div>
-
-					<a href="/2019/04/08/CSS3/" title="CSS3">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="CSS3">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/06/CSS-Flex/" title="CSS-Flex">
-							CSS-Flex
-						</a>
-						<p>
-							
-						</p>
-					</div>
-
-					<a href="/2019/04/06/CSS-Flex/" title="CSS-Flex">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="CSS-Flex">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/06/React面试整理/" title="React面试整理">
-							React面试整理
-						</a>
-						<p>
-							React 面试整理
-react 版本 v16
-
-React 组件的生命周期class Component 和 Function Component 的区别 ？ 什么情况下不用类组件和函数组件是什么？refs的作用是什么？React ...
-						</p>
-					</div>
-
-					<a href="/2019/04/06/React面试整理/" title="React面试整理">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="React面试整理">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/04/03/面试小册-JS基础2/" title="面试小册-JS基础2">
-							面试小册-JS基础2
-						</a>
-						<p>
-							面试小册-JS基础2
-== vs ===
-涉及面试题：== 和 === 有什么区别？
-
-对于 == 来说，如果对比双方的类型不一样的话，就会进行类型转换，这也就用到了我们上一章节讲的内容。
-假如我们需要对比 x 和 y 是否相同，就会...
-						</p>
-					</div>
-
-					<a href="/2019/04/03/面试小册-JS基础2/" title="面试小册-JS基础2">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="面试小册-JS基础2">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/03/27/js经典面试题/" title="js 经典面试题">
-							js 经典面试题
-						</a>
-						<p>
-							
-for (var i = 0; i &lt; 5; i++) {
-    setTimeout(function() {
-        console.log(new Date, i);
-    }, 1000);
-}
-conso...
-						</p>
-					</div>
-
-					<a href="/2019/03/27/js经典面试题/" title="js 经典面试题">				
-						<img src="/img/cz3.jpg" class="relateImg" alt="js 经典面试题">
-					</a>
-				</li>											
-		
-		
-	</ul>
-</div>	
-			</div>
-			<div class="investment-content-list">
-				<div class="layout-comment">
-
-	
-
-		
-
-			<!-- comment gitalk -->
-			<!-- show gitalk comment -->
-<div id="gitalk-container"></div>
-
-<!-- gitalk`s css & js -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<link rel="stylesheet" href="/css/comment.css">
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<script type="text/javascript">
-	//Thanks O-R
-	//https://github.com/gitalk/gitalk/issues/102#issuecomment-382970552
-	//去除尾部匹配正则数组的字符串  
-	//Remove redundant characters
-	String.prototype.trimEnd = function(regStr) {
-		var result = this;
-		if(regStr == undefined || regStr == null || regStr == "") {
-			return result;
-		}
-		var array = regStr.split(',');
-
-		if(array.length > 0) {
-
-			var c = array.shift();
-			var str = this;
-			var i = str.length;
-			var rg = new RegExp(c);
-			var matchArr = str.match(rg);
-
-			if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
-				var matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
-					.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
-					.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
-					.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
-					.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
-					.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
-					.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
-					.replace(/\./g, "\\.").replace(/\&/g, "\\&");
-				matchStr = matchStr + '$';
-				result = str.replace(new RegExp(matchStr), "");
-			}
-
-			if(array.length > 0) {
-				return result.trimEnd(array.join())
-			} else {
-				return result;
-			}
-		}
-	};
-
-	//Create gitalk
-	var gitalk = new Gitalk({
-		clientID: 'd9d6c283b2c5d76dbd4e',
-		clientSecret: '3af54c1caab665fdd93e73f7436a7b3c3d0e355a',
-		//id: window.location.pathname,
-		//id: decodeURI(window.location.pathname),
-		//id: (window.location.pathname).split("/").pop().substring(0, 49),
-		id: decodeURI( md5( location.href.trimEnd('#.*$,\\?.*$,index.html$') ) ),
-		repo: 'wiki',
-		owner: 'ccOnTheWay',
-		admin: 'ccOnTheWay',
-		distractionFreeMode: 'true',
-	})
-	gitalk.render('gitalk-container');
-</script>
-
-		
-		
-	
-
-</div>
-			</div>
-		</div>	
-	</div>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
 
 
-	<!-- leancloud -->
-	<!--
-	时间：2018-11-27
-	描述：
-		文章访问量：visitors
-		文章喜欢量：likes	
-		文章排行榜：topNPost
-		其他得说明：
-			01-Cookie相关的函数 
-				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
-			02-visitors相关的函数 
-				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
-				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
-			03-topNPost相关的函数
-				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
-			04-likes相关的函数，
-				参考了01 & 02进行简单的设计与实现
--->
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其它-效率/">其它 效率</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/&title=《LICEcap录屏插件》 — 前端进阶之路&pic=https://github.com/ccOnTheWay/wiki.git/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/&title=《LICEcap录屏插件》 — 前端进阶之路&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LICEcap录屏插件》 — 前端进阶之路&url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/&via=https://github.com/ccOnTheWay/wiki.git" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
 
 
-	<script>
-		var appid = 'OUMeWbC2GtYwDVz6kFABL6Ye-gzGzoHsz',
-            appkey = 'RnETD55QkgMpjT0k2TEqq1Yr';	  
-        AnnieLeancloud(appid, appkey);         
-	</script>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/04/03/面试小册-JS基础2/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">面试小册-JS基础2</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/27/js经典面试题/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">js 经典面试题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
     
 
 
- 
-
-<!-- show math formula -->
 
 
 
 
-<!-- TODO: There seems to be a bug when you close the post gallery! -->
-<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
-<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
-<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
-
-<script type="text/javascript">
-	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
-	$('.article-content img').each(function() {
-		var imgPath = $(this).attr('src'),
-			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
-		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
-	});
-
-	$('.article-content').lightGallery({
-		mode: 'lg-slide',
-		selector: '.img-responsive',
-		share: false,
-		zoom: false,
-		download: false
-	});
-	//TODO：支持video
-</script>
-
-<!--
-	时间：2018-11-17
-	描述：
-		插件名称：katelog.min.js
-		插件作者：KELEN
-		插件来源: https://github.com/KELEN/katelog
--->
-
-		
-
-		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
-	
-		</main>
-		
-		<!--footer-->
-		<footer>
-	<div class="social">
-		<ul>
-	
-		
-			<li>
-				<a href="https://github.com/ccOnTheWay/wiki" title="Github" target="_blank">
-					<i class="fa fa-github"></i>
-				</a>
-			</li>
-		
-		
-		
-			<li>
-				<a href="mailto:fengxicai@fengxicai.cn" title="Email" target="_blank">
-					<i class="fa fa-envelope-o"></i>
-				</a>
-			</li>
-		
-
-		
-		
-	 
-</ul>
-	</div>
-		
-	<div class="copyright">
-		<p>
-			 
-				&copy;2019 - 2020, content by FXC. All Rights Reserved.
-			
-			
-			
-
-	<!-- busuanzi -->
-	<!-- busuanzi -->
-
-		
-	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	
-
-		<span id="busuanzi_container_page_pv">
-	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-		</span>
-
-	
 
 
 
 
-		</p>
-		<!-- <p>
-			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
-		</p> -->
-	</div>		
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>FXC &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
 </footer>
-		
-    <!-- set '1' to show motto in all pages! -->
 
-	<script src="/js/motto.js"></script>
-	<script type="text/javascript">
-		$(".motto").html( getMingYanContent() );
-	</script>	
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
 
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/&title=《LICEcap录屏插件》 — 前端进阶之路&pic=https://github.com/ccOnTheWay/wiki.git/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/&title=《LICEcap录屏插件》 — 前端进阶之路&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LICEcap录屏插件》 — 前端进阶之路&url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/&via=https://github.com/ccOnTheWay/wiki.git" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/ccOnTheWay/wiki.git/2019/04/01/LICEcap录屏插件/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-    <!--
-	时间：2018-10-3
-	描述：
-		插件名称：hexo-generator-search-zip
-		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
-		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
--->
-<div class="popup search-popup local-search-popup">
-	<div class="local-search-container">
-		<span class="popup-btn-close">
-      ESC
-   </span>
-		<div class="local-search-header">
-			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
-		</div>
-		<div class="local-search-body">
-			<div id="local-search-output"></div>
-		</div>
-		<div class="local-search-footer">
-			
 
-   
-	<div id="topN"></div>
-	
-    <script>
-        var appid = 'OUMeWbC2GtYwDVz6kFABL6Ye-gzGzoHsz',
-            appkey = 'RnETD55QkgMpjT0k2TEqq1Yr',
-            limitCount = 10;
-        if( $('#topN').length ){
-            AV.initialize(appid, appkey);
-            var Counter = AV.Object.extend("Counter");  
-            topNPost(Counter, limitCount);
-        }
-    </script>
-   
-
-		</div>
-	</div>
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3awWpjMQwF0P7/T2egq8JMknslu+3A8ao0D1vHgWdF1sdHPB6fI//0638eX8bfzySfJjGsBh4eHt4o9GfjNSB5fgZ7vYlJzHh4eHi3ecl0m+dz8Ot3ex4DHh4e3m/gtWHlyXebUuPh4eH9L7xT+DwhxsPDw/vNvKS4kHxaFwtGqfyVWgseHh7efP7Vkt/z98X7PTw8PLzFrXr+2m2fnM1Qx4mHh4d3gbcpxSZtWHkQp8q7w3Dx8PDwRry2CaBtDsiLGnmZOIkfDw8P7wZv9rM/fz4/SGYbEa2Ch4eHd5SXTJ0fAO1F1/54GKbUeHh4eCPeLC2eNV3lbVU5Iyrg4uHh4V3mbQqm+QzJkbPfJjw8PLx7vFkmfqNdYJaCv6lP4+Hh4R3lzS7p21aAthQ7KyVH3yEeHh7eId7sl/vsmirZpllDQ3ENhoeHh7fgzUI5m69uWhPerIuHh4d3gbdvjcpf4nlqnr/66zYCPDw8vEO8x2i0V1N5K0B7IL05bPDw8PAu85KFZyn4LPSPeDydEw8PD+8Crw2xvfKfNRO0CXqxNXh4eHhr3qYEkLRA5elvu3FRqwEeHh7eBV5+cdUWF2YNBO0zUZUaDw8P7xBvXzZtU+F7jQL/mAEPDw/vAq89Elrq7Eioux5mTVd4eHh4a95solPpeHvZtioo4+Hh4a157Ss+aTLIkW1an5eb8fDw8L6Hty8QzErDs5mjOPHw8PCO8h7laBdur8dmjQVPNw4PDw/vAu9scO1xkmzcMI2+sfd4eHh4QUk0n27fdpCn+HWCjoeHh3eN19YwZk1ULSY/tN70RODh4eH9KK89JPL+hbzwURRK8PDw8H6U1ybN+3aBZAveJNZ4eHh413h5cG3TQL7WqcYvPDw8vNu8/QXYbPkkTc8LGatbPjw8PLyU9wcewyvwJY+qTQAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
-<script src="/js/ziploader.js"></script>
-<script src="/js/search.js"></script>
 
-<script type="text/javascript">
-	var search_path = 'search.json',
-		zip_Path = '/search.zip',
-		version_Path = '/searchVersion.txt',
-		input_Trigger = 'auto',
-		top_N = '2';
 
-	themeLocalSearch({
-		search_path, 
-		zip_Path, 
-		version_Path, 
-		input_Trigger, 
-		top_N
-	});
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
 
-    <script src="/js/love.js"></script>
-
-
-<!--back to top-->
-
-    
-	<div id="totop">
-  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
-	</div>
-	<div id="tobuttom">
-		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
-	</div>
- 
-
-
- 
-
-<script src="/js/vibrant.js"></script>
-<script src="/js/chinese.js"></script>
-<script src="/js/main.js"></script>
-	</body>
-	</html>
+</body>
+</html>
